@@ -19,7 +19,7 @@ def log(request):
             message=request.GET.get('m'),
             ip=request.META.get('REMOTE_ADDR'),
             browser=user_agent.get('family') or '',
-            browser_version=user_agent.get('major')  or '',
+            browser_version=user_agent.get('major') or '',
             os=os.get('family'),
             cookies_enabled=request.REQUEST.get('c')
         ).save()
