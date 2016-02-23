@@ -1,6 +1,7 @@
 import ua_parser
 from models import JSErrorLog
 from django.http import HttpResponse
+import traceback
 
 
 def log(request):
