@@ -7,7 +7,8 @@ Django app to log javascript errors.
 ##  Updates
 * February 7, 2013:
     * added tracking for ip address, browser, browser version, os and if cookies are enabled
-
+* February 10, 2018:
+    * Django 1.11.x compatibility
 
 ##  Prerequisites
 

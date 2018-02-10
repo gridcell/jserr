@@ -22,7 +22,7 @@ def log(request):
             browser=user_agent.get('family') or '',
             browser_version=user_agent.get('major') or '',
             os=os.get('family'),
-            cookies_enabled=request.REQUEST.get('c')
+            cookies_enabled=request.GET.get('c')
         ).save()
     except:
         traceback.print_exc()

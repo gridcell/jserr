@@ -1,12 +1,13 @@
 from django import template
 from django.conf import settings
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
 
 @register.simple_tag
 def jserr():
-    return """
+    js_string = """
     <script type="text/javascript">
         if (%s) {
             window.onerror = function(message, url, lineNumber){
@@ -20,3 +21,4 @@ def jserr():
         }
     </script>
     """ % ('true' if not settings.DEBUG else 'false')
+    return mark_safe(js_string)
